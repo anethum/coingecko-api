@@ -29,7 +29,7 @@ class CoingeckoApi
      * @param string $apiUrn example: /
      * @param array $options extra parameters
      */
-    public function __construct(string $baseUri = 'https://www.coingecko.com', string $apiUrn = '/', array $options = [])
+    public function __construct(string $baseUri = 'https://www.coingecko.com/api/v3/', string $apiUrn = '/', array $options = [])
     {
         $this->client = new GuzzleClient($baseUri, $apiUrn, $options);
         $this->endpointFactory = new EndpointFactory();
